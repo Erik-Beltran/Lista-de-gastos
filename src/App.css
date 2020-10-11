@@ -1,17 +1,76 @@
+*{
+  box-sizing: border-box;
+}
 .App {
-  text-align: center;
+  background: #4e54c8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #8f94fb,
+    #4e54c8
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #8f94fb,
+    #4e54c8
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
 }
 
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 30px;
+}
+
+.body{
+  display: flex; 
+  justify-content: space-evenly; 
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  background: white;
+}
+
+.gastosInfo{
+  width: 45%;
+  padding: 30px;
+}
+.listado{
+  width: 45%;
+  padding: 30px;
+}
+
+.listItem{
+  display: flex;
+  justify-content: space-between;
+}
+.listaGastos{
+  margin-bottom: 20px;
+}
+.is-danger{
+  width: 50%;
+  margin: 20px 25%;
+}
+.message{
+  width: 40%;
+  margin: 0 auto 20px;
+  display: none;
+}
+
+#restante{
+  margin-top: 20px;  
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.control{
+  display: flex;
 }
+
 
 .App-header {
   background-color: #282c34;
@@ -28,11 +87,19 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 767px) { 
+  .body {
+    width: 95%;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .gastosInfo,
+  .listado{
+    width: 100%;
   }
+
+  #mensajes{
+    width: 90%;
+  }
+
 }
